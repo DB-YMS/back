@@ -7,7 +7,7 @@ class DivisionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Division
-        fields = '__all__'
+        fields = '__all__' # Division에 있는 모든 값 출력
 
 
 class MasterSerializer(serializers.ModelSerializer):
@@ -15,7 +15,7 @@ class MasterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Master
-        fields = '__all__'
+        fields = '__all__' # Master에 있는 모든 값 출력
 
 
 class SiteSerializer(serializers.ModelSerializer):
@@ -25,7 +25,7 @@ class SiteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Site
-        fields = '__all__'
+        fields = '__all__' # Site에 있는 모든 값 출력
 
 
 class YardSerializer(serializers.ModelSerializer):
@@ -34,3 +34,4 @@ class YardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Yard
         fields = '__all__'
+

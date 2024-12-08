@@ -32,7 +32,6 @@ class Master(models.Model):
 
 class Site(models.Model):
     site_id = models.IntegerField(primary_key=True)
-    equipment_type = models.ForeignKey(equipments.models.Equipment, models.DO_NOTHING, db_column='equipment_type')
     capacity = models.IntegerField()
     current_quantity = models.IntegerField()
 
