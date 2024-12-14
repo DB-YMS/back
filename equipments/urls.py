@@ -1,7 +1,12 @@
 from django.urls import path
 
-from . import views
+from .views import (
+    EquipmentCreateView, EquipmentListView, EquipmentUpdateView, EquipmentDeleteView,
+)
 
 urlpatterns = [
-    path('', views.index)
+    path('equipment/', EquipmentCreateView.as_view(), name='equipment_create'),
+    path('equipment/all/', EquipmentListView.as_view(), name='equipment_list'),
+    path('equipment/<int:pk>/update/', EquipmentUpdateView.as_view(), name='equipment_update'),
+    path('equipment/<int:pk>/delete/', EquipmentDeleteView.as_view(), name='equipment_delete'),
 ]
