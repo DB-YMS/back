@@ -19,14 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from location import views
+from equipments import views
+from transactions import views
+from user import views
 
 from rest_framework.authtoken import views
-from equipments.api import EquipmentList, EquipmentDetail
-from location.api import DivisionList, MasterList, SiteList, YardList, DivisionDetail, MasterDetail, SiteDetail, \
-    YardDetail
-from transactions.api import TransactionList, TransactionDetail
-from user.api import DriverList, DriverDetail
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('location/', include('location.urls')),
