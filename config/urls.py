@@ -33,18 +33,6 @@ urlpatterns = [
     path('equipments/', include('equipments.urls')),
     path('transactions/', include('transactions.urls')),
     path('user/', include('user.urls')),
-    path('api/equipment_list', EquipmentList.as_view(), name='equipment_list'),
-    path('api/equipment_list/<int:equipment_id>', EquipmentDetail.as_view(), name='equipment_list'),
-    path('api/division_list', DivisionList.as_view(), name='division_list'),
-    path('api/division_list/<int:division_id>', DivisionDetail.as_view(), name='division_list'),
-    path('api/master_list', MasterList.as_view(), name='master_list'),
-    path('api/master_list/<int:id>', MasterDetail.as_view(), name='master_list'),
-    path('api/site_list', SiteList.as_view(), name='site_list'),
-    path('api/site_list/<int:site_id>', SiteDetail.as_view(), name='site_list'),
-    path('api/transaction_list', TransactionList.as_view(), name='transaction_list'),
-    path('api/transaction_list/<int:transactions_id>', TransactionDetail.as_view(), name='transaction_list'),
-    path('api/driver_list', DriverList.as_view(), name='driver_list'),
-    path('api/driver_list/<int:driver_id>', DriverDetail.as_view(), name='driver_list'),
     path('api/auth', views.obtain_auth_token, name='obtain_auth_token'),
 ]
 
