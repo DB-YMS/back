@@ -155,3 +155,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     ]
 }
+
+LOCATION = r"D:\ora64\instantclient-basic-windows.x64-19.8.0.0.0dbru\instantclient_19_8"
+os.environ["PATH"] = LOCATION + ";" + os.environ["PATH"]
